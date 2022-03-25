@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    scroll-behavior: smooth;
     list-style: none;
 }
 /* 
@@ -219,7 +220,7 @@ section.about .about-right h1{
    border: 1px solid rgb(162, 168, 187);
 }
 
-.about-right button a:hoveR{
+.about-right button a:hover{
     color: rgb(94, 95, 97);
 }
 
@@ -289,7 +290,6 @@ section.projects{
     width: 100%;
     height: auto;
     display: flex;
-    
 }
 
 .project-container .pros .project{
