@@ -20,11 +20,12 @@ body{
     width: 100%;
     height: 100%;
     scroll-behavior: smooth;
+    background: #f1f2f3;
 }
 
 section.navbar {
     height: 100vh;
-    background-image: url(images/layer-3-2.png);
+    background-image: url("images/pexels-hasan-albari-1229861.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -40,7 +41,7 @@ section.navbar nav{
     top: 0;
     z-index: 3;
     height: 80px;
-    background: #f1f2f3;
+    background: #aaadaf;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -88,7 +89,8 @@ section.navbar ul li{
 }
 
 section.navbar ul li a, section.navbar .nav-right a{
-    color: rgb(162, 168, 187);
+    color: rgb(97, 97, 97);
+    font-size: 22px;
     transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
@@ -103,7 +105,7 @@ section.navbar ul li a:hover, section.navbar .nav-right a:hover{
 section.navbar .nav-right a{
     text-transform: uppercase;
     margin-right: 50px;
-    color: rgb(162, 168, 187);
+    color: rgb(125, 126, 129);
 }
 
 section.navbar .main{
@@ -120,12 +122,12 @@ section.navbar .main h1{
     */font-family: 'Redressed', cursive;
     font-weight: 600;
     text-transform: capitalize;
-    font-size: 130px;
+    font-size: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    color: rgb(91, 59, 79);
+    color: #f1f2f3;
 }
 
 
@@ -186,7 +188,7 @@ section.about .about-right h1{
 }
 
 .about-right p{
-    color: rgb(162, 168, 187);
+    color: rgb(122, 122, 122);
     font-size: 20px;
     font-family: 'Bubblegum Sans', cursive;
     line-height: 25px;
@@ -212,6 +214,7 @@ section.about .about-right h1{
 }
 
 .about-right button a{
+   transition: all 0.3s ease-in-out;
     color: rgb(91, 59, 79);
 }
 
@@ -223,6 +226,10 @@ section.about .about-right h1{
 .about-right button a:hover{
     color: rgb(94, 95, 97);
 }
+.about-right p a{
+    color: rgb(91, 59, 79);
+    text-transform: uppercase;
+}
 
 
 /* .......................skills section styling/..................... */
@@ -231,6 +238,7 @@ section.myskills{
     width: 100%;
     height: 50vh;
 }
+
 
 section.myskills .skills{
     /* display: flex;
@@ -303,16 +311,6 @@ section.projects{
     position: relative;
 }
 
-.pros .project1{
-    background-image: url("./images/project11.png");
-    filter: grayscale(1);
-}
-
-.pros .project2{
-    background-image: url("./images/project2.png");
-    filter: grayscale(1);
-}
-
 .pros .project3{
     background-image: url("./images/project3.png");
     filter: grayscale(1);
@@ -320,11 +318,6 @@ section.projects{
 
 .pros .project4{
     background-image: url("./images/project4.png");
-    filter: grayscale(1);
-}
-
-.pros .project5{
-    background-image: url("./images/project5.png");
     filter: grayscale(1);
 }
 
@@ -343,9 +336,11 @@ section.projects{
     filter: grayscale(1);
 }
 
-.pros .project9{
-    background-image: url("./images/project92.png");
-    filter: grayscale(1);
+.pros .project{
+    transition: all 0.3s ease-in-out;
+}
+.pros .project:hover{
+    filter: grayscale(0);
 }
 
 .pros .project a{
@@ -360,6 +355,9 @@ section.projects{
     color: rgb(91, 59, 79);
     padding: 10px 15px;
     border-radius: 20px;
+}
+.project-info{
+    bottom: 0;
 }
 
 /* .pros .project a:hover{
@@ -430,7 +428,9 @@ section.contact .contact-container{
    font-family: 'Bubblegum Sans', cursive;
    font-weight: 400;
 }
-
+.contact-left h3 a{
+    color: rgb(91, 59, 79);
+}
 .contact-right form{
     display: flex;
     flex-direction: column;
@@ -493,7 +493,7 @@ section.contact .contact-container{
 /* footer section ................................... */
 
 section.footer{
-    background: rgb(213, 215, 221);
+    background: #aaadaf;
     font-family: 'Bubblegum Sans', cursive;
     width: 100%;
     color: rgb(91, 59, 79);
@@ -513,6 +513,10 @@ section.footer li a{
     color: rgb(91, 59, 79);
     cursor: pointer;
     font-size: 25px;
+    transition: all 0.3s ease-in-out;
+}
+section.footer li a:hover{
+    color: black;
 }
 
 form .toast{
