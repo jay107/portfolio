@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Redressed&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 *{
     margin: 0;
@@ -7,6 +8,7 @@
     text-decoration: none;
     scroll-behavior: smooth;
     list-style: none;
+    /* overflow: hidden; */
 }
 /* 
 html {
@@ -25,10 +27,11 @@ body{
 
 section.navbar {
     height: 100vh;
-    background-image: url("images/pexels-hasan-albari-1229861.jpg");
+    background-image: url("images/modern-analytics-1317115_1280.jpg");
+    /* filter: grayscale(100%); */
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     box-shadow: inset;
     z-index: 2;
     background-repeat: no-repeat;
@@ -37,7 +40,8 @@ section.navbar {
 
 section.navbar nav{
     width: 100%;
-    position: fixed;
+    /* position: fixed;x */
+    opacity: 0.9;
     top: 0;
     z-index: 3;
     height: 80px;
@@ -45,7 +49,7 @@ section.navbar nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: 'Bubblegum Sans', cursive;
+    font-family: 'Noto Sans', sans-serif;
 }   
 
 section.navbar nav .nav-left{
@@ -61,7 +65,7 @@ section.navbar .nav-right .fa-bars{
     bottom: 50px;
     right: 50px;
     font-size: 30px;
-    color: rgb(162, 168, 187);
+    color: rgb(91, 59, 79);
     transition: all 0.4s ease-in-out;
 }
 
@@ -72,7 +76,7 @@ section.navbar .nav-right .fa-bars{
 section.navbar .logo{
     line-height: 80px;
     margin: auto 30px;
-    font-family: 'Redressed', cursive;
+    font-family: 'Montserrat', sans-serif;
     color: rgb(91, 59, 79);
     font-size: 30px;
 }
@@ -108,6 +112,12 @@ section.navbar .nav-right a{
     color: rgb(125, 126, 129);
 }
 
+section.navbar .nav-right a.nav_hire_me{
+    text-transform: uppercase;
+    margin-right: 50px;
+    font-size: 27px;
+    color: rgb(91, 59, 79);
+}
 section.navbar .main{
     width: 100%;
     height: calc(100vh - 80px);
@@ -118,8 +128,8 @@ section.navbar .main{
 }
 
 section.navbar .main h1{
-    /*font-family: 'Bubblegum Sans', cursive;
-    */font-family: 'Redressed', cursive;
+    /*font-family: 'Noto Sans', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     text-transform: capitalize;
     font-size: 120px;
@@ -127,7 +137,7 @@ section.navbar .main h1{
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    color: #f1f2f3;
+    color: #000000;
 }
 
 
@@ -155,6 +165,7 @@ section.about::before{
 section.about .about-left{
     height: 100%;
     width: 50%;
+    margin-top: 50px;
     z-index: 2;
     display: flex;
     align-items: center;
@@ -162,6 +173,7 @@ section.about .about-left{
 }
 
 section.about img{
+    /* margin-top: 20px; */
     width: 400px;
     height: 400px;
 }
@@ -174,7 +186,7 @@ section.about .about-right{
 
 section.about .about-right h1{
     color: rgb(91, 59, 79);
-    font-family: 'Redressed', cursive;
+    font-family: 'Montserrat', sans-serif;
     text-transform: capitalize;
     font-size: 40px;
     margin-top: 120px;
@@ -182,7 +194,7 @@ section.about .about-right h1{
 }
 
 .about-right h5{
-    font-family: 'Redressed', cursive;
+    font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     color: rgb(91, 59, 79);
 }
@@ -190,8 +202,11 @@ section.about .about-right h1{
 .about-right p{
     color: rgb(122, 122, 122);
     font-size: 20px;
-    font-family: 'Bubblegum Sans', cursive;
+    /* margin-top: ; */
+    font-family: 'Noto Sans', sans-serif;
     line-height: 25px;
+    width: 600px;
+    text-align: justify;
     letter-spacing: 1px;   
 }
 /* 
@@ -202,8 +217,8 @@ section.about .about-right h1{
 
 .about-right button{
    margin-top: 50px;
-   font-family: 'Bubblegum Sans', cursive;
-   font-size: 20px;
+   font-family: 'Noto Sans', sans-serif;
+   font-size: 25px;
    padding: 10px 15px;
    border: 1px solid rgb(91, 59, 79);
    border-radius: 20px;
@@ -235,51 +250,36 @@ section.about .about-right h1{
 /* .......................skills section styling/..................... */
 
 section.myskills{
-    width: 100%;
-    height: 50vh;
+    /* width: 100; */
+    margin-bottom: 40px;
 }
 
 
-section.myskills .skills{
-    /* display: flex;
+section.myskills .skills-column{
+    display: flex;
     justify-content: space-around;
-    align-items: center; */
+    align-items: center;
 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
    
 }
 
-.skills .first{
-    margin: auto;
-}
 
-section.myskills .first h1{
+section.myskills .row h2{
     color: rgb(91, 59, 79);
-    font-family: 'Redressed', cursive;
+    font-family: 'Montserrat', sans-serif;
     font-size: 35px;
     margin-bottom: 30px;
 }
 
-.ldBar path.mainline {
-    stroke-width: 10;
-   font-family: 'Bubblegum Sans', cursive;
+section.myskills ul li{
+    color: rgb(102, 100, 101);
+    font-size: 20px;
+    font-family: 'Noto Sans', sans-serif;
+    margin: 8px 0;
 
-    stroke: rgb(91, 59, 79);
-    stroke-linecap: round;
-  }
-  .ldBar path.baseline {
-    stroke-width: 14;
-    stroke: #f1f2f3;
-    stroke-linecap: round;
-    filter:url(#custom-shadow);
-  }
-
-  .label-center{
-      color: rgb(162, 168, 187);
-      font-weight: 600;
-      font-size: 27px;
-  }
+}
 /* project sectiion styline..................................... */
 
 section.projects{
@@ -290,74 +290,22 @@ section.projects{
     color: rgb(162, 168, 187);
     text-align: center;
     font-size: 30px;
-   font-family: 'Bubblegum Sans', cursive;
+   font-family: 'Noto Sans', sans-serif;
     margin: 30px auto;
 }
 
-.project-container .pros{
-    width: 100%;
-    height: auto;
+.project-container{
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    /* width: ;     */
 }
+.project-container img{
+    width: 500px;
+    cursor: pointer;
 
-.project-container .pros .project{
-    margin: auto;
-    width: 200px;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 20px;
-    transition: all 0.3s ease-in-out;
-    position: relative;
-}
-
-.pros .project3{
-    background-image: url("./images/project3.png");
-    filter: grayscale(1);
-}
-
-.pros .project4{
-    background-image: url("./images/project4.png");
-    filter: grayscale(1);
-}
-
-.pros .project6{
-    background-image: url("./images/project6.png");
-    filter: grayscale(1);
-}
-
-.pros .project7{
-    background-image: url("./images/PROJECT7.png");
-    filter: grayscale(1);
-}
-
-.pros .project8{
-    background-image: url("./images/project8.png");
-    filter: grayscale(1);
-}
-
-.pros .project{
-    transition: all 0.3s ease-in-out;
-}
-.pros .project:hover{
-    filter: grayscale(0);
-}
-
-.pros .project a{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    transition: all 0.3s ease-in-out;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    color: rgb(91, 59, 79);
-    padding: 10px 15px;
-    border-radius: 20px;
-}
-.project-info{
-    bottom: 0;
+    border: solid 1px black;
 }
 
 /* .pros .project a:hover{
@@ -372,28 +320,74 @@ section.projects{
     background-color: rgb(162, 168, 187);
 }
 
+.read_all_blogs{
+    color: rgb(91, 59, 79);
+    font-size: 22px;
+    background: #aaadaf;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    margin: 30px 0 0 30px;
+}
 
-/* contact section................................................ */
+/* featured blogs section --------------------  */
 
-
-section.contact{
-    /* height: 100vh; */
+.featured-blogs-container, .bogs-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* flex-direction: column; */
     width: 100%;
 }
 
-section.myskills .heading, section.contact .heading, section.projects .heading{
+.featured-blogs-container{
+    flex-direction: column;
+}
+
+.featured-blogs-container .row{
+    width: 500px;
+    cursor: pointer;
+    background-color: rgb(230, 230, 230);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(91, 59, 79);
+    padding: 15px 25px;
+    border-radius: 20px;
+    transition: all 0.4s ease-in-out;
+}
+.featured-blogs-container .row:hover{
+    background-color: initial;
+    
+}
+.featured-blogs-container .row h3{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.featured-blogs-container .row p{
+    color: rgb(94, 95, 97);
+    text-align: justify;
+}
+.read_all_blogs{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* contact section................................................ */
+
+
+section.myskills .heading, section.contact .heading, section.projects .heading, .featured-blogs .heading{
     font-size: 45px;
     color: rgb(91, 59, 79);
     text-align: center;
     margin: 80px 0;
-    font-family: 'Redressed', cursive;
+    font-family: 'Montserrat', sans-serif;
 }
 
 section.contact .contact-container{
-    /* display: flex;
-    justify-content: space-around; */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
     margin: auto;
     width: 100%;
     color: rgb(91, 59, 79);
@@ -404,118 +398,84 @@ section.contact .contact-container{
     margin-bottom: 40px;
 }
 
-.contact-container .contact-left h1{
+.contact-container h1{
     color: rgb(91, 59, 79);
     font-size: 35px;
-    font-family: 'Redressed', cursive;
+    font-family: 'Montserrat', sans-serif;
     margin-bottom: 30px;
 }
 
-.contact-left .row{
+.contact-container .row{
     display: flex;
     margin-bottom: 20px;
     line-height: 30px;
 }
 
-.contact-left i{
+.contact-container i{
     margin-right: 10px;
     margin-top: 10px;
     font-size: 30px;
 }
 
-.contact-left h2, .contact-left h3{
+.contact-container h2, .contact-container h3{
     font-size: 20px;
-   font-family: 'Bubblegum Sans', cursive;
+   font-family: 'Noto Sans', sans-serif;
    font-weight: 400;
 }
-.contact-left h3 a{
+.contact-container h3 a{
     color: rgb(91, 59, 79);
 }
-.contact-right form{
+.contact-column{
+    width: 80%;
+}
+.contact-column{
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.contact-right form h1{
-    font-size: 35px;
-    font-family: 'Bubblegum Sans', cursive;
-    margin-bottom: 40px;
-    font-weight: 400;
-}
+/* social-links section ................................... */
 
-.contact-right input, .contact-right textarea{
-    margin-bottom: 20px;
-    border-top: none;
-    outline: none;
-    padding: 5px;
-    font-size: 20px;
-    letter-spacing: 1px;
-    color: rgb(162, 168, 187);
-    font-family: 'Redressed', cursive;
-    font-weight: 600;
-    width: 300px;
-}
-
-.contact-right input::placeholder{
-    font-size: 18PX;
-    color: rgb(162, 168, 187);
-    font-family: 'Redressed', cursive;
-    font-weight: 600;
-}
-
-.contact-right form button{
-    width: 150px;
-    margin: auto;
-    color: rgb(91, 59, 79);
-    background: none;
-    border: 1px solid rgb(91, 59, 79);
-    font-size: 20px;
-    font-family: 'Bubblegum Sans', cursive;
-    font-weight: 400;
-    padding: 10px 15px;
-    border-radius: 7px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    -ms-border-radius: 7px;
-    -o-border-radius: 7px;
-}
-
-.contact-right form button:hover{
-    background: rgb(213, 215, 221);
-}
-
-/* footer section ................................... */
-
-section.footer{
-    background: #aaadaf;
-    font-family: 'Bubblegum Sans', cursive;
+section.social-links{
+    background-image: initial;
+    font-family: 'Noto Sans', sans-serif;
     width: 100%;
     color: rgb(91, 59, 79);
-    height: 80px;
+    height: 200px;
+    filter: grayscale(100%);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-section.footer ul li{
+section.footer{
+    background-image: url("./images/google-1385511_1920.jpg");
+    background-position: center;
+    background-size: cover;
+    font-family: 'Noto Sans', sans-serif;
+    width: 100%;
+    color: rgb(91, 59, 79);
+    height: 500px;
+    /* filter: grayscale(100%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section.social-links ul li{
     display: inline;
     margin: 5px 20px 20px 0;
 }   
 
-section.footer li a{
+section.social-links li a{
     color: rgb(91, 59, 79);
     cursor: pointer;
     font-size: 25px;
     transition: all 0.3s ease-in-out;
 }
-section.footer li a:hover{
+section.social-links li a:hover{
     color: black;
 }
 
