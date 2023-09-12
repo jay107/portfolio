@@ -1,239 +1,571 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <title>Portfolio Web Analytics</title>
+     
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-<head>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-WRC5KGPL');</script>
-        
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
 
-    <!-- //fonr awesome icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
 
-    <!-- typed.js  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <link rel="shortcut icon" href="./icons/suitcase.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <link rel="shortcut icon" href="./images/icons8-portfolio-48.png" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="loading-bar.css" />
-    <script type="text/javascript" src="loading-bar.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
 
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js">
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!----------megnetic popup css file------->
 
-    <title>[Google Analytics Expert]</title>
-</head>
+    <link rel="stylesheet" href="vendor/Magnific-Popup/dist/magnific-popup.css">
 
-<body>
-    <section class="navbar" id="home">
-        <nav>
-            <div class="nav-left">
-                <h1 class="logo">Jay Isamaliya</h1>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#skills">Services</a></li>
-                    <li><a href="#projects">Certificates</a></li>
-                    <!-- <li><a href="#featured-blogs">Featured Blogs</a></li> -->
-                    <li><a href="#contact">Contact Me</a></li>
-                </ul>
+    <!--------owl-carousel css file----->
 
-            </div>
-            <div class="nav-right">
-                <!-- <a href="#" id="time"></a> -->
-                <a href="https://www.upwork.com/freelancers/jayi7" target="_blank" class="nav_hire_me">HIRE
-                    ME</a>
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </nav>
-        <div class="main">
-            <!-- <h1>Hello, <br> i'm jay isamaliya <br>Web Analytics Expert</h1> -->
-        </div>
-        <a href="#home" id="home-arrow"><i class="fa-solid fa-circle-arrow-up"></i></a>
-    </section>
+    <link rel="stylesheet" href="vendor/owl-carousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/owl-carousel/css/owl.theme.default.min.css">
 
-    <section class="about" id="about">
-        <div class="about-left">
+ </head>
+ <body>
 
-            <img src="./images/Untitled design.png">
-        </div>
-        <div class="about-right">
-            <h1>ABOUT ME</h1>
-            <h5>Web Analyst</h5>
-            <p>
-                I’m a Google Analytics and Google Tag Manager expert who loves helping businesses track their website
-                traffic and conversions. I’m certified by Google in both platforms, and I have experience working with a
-                variety of businesses, from small startups to large enterprises. I’m also a quick learner and I’m always
-                up for a challenge. If you’re looking for someone to help you get the most out of your Google Analytics
-                and Google Tag Manager accounts, I’m here to help you..<br>
-                <!-- Visit my <a target="_blank" href="https://www.github.com/jay107">Github Page</a> to see my works. -->
-            </p>
-            <button><a href="https://www.upwork.com/freelancers/jayi7" target="_blank">Hire Me</a></button>
-        </div>
-    </section>
+    <!------------header------------>
 
-    <section class="myskills" id="skills">
-
-        <h1 class="heading">Services</h1>
-
-        <div class="skills">
-            <div class="skills-column">
-                <div class="row">
-                    <h2>Google Analytics</h2>
-                    <ul style="list-style-type:disc">
-                        <li>Google analytics 4 setup</li>
-                        <li>Google Analytics audit</li>
-                        <li>UA to GA4 Migration</li>
-                        <li>Enhanced Ecommerce</li>
-                        <li>Conversion, Audience Custom Dimension / Metrics</li>
-                        <li>Cross Domain/ Cross Device Custom Report</li>
-                        <li>Big query Export</li>
-                        <li>Marketing Platform Connection</li>
-                        <li>Custom Reports / Funnel Creation</li>
+    <header class="header_area">
+        <div class="main-menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#home" style="font-family: 'Roboto', cursive;"><h1>Jay Isamaliya</h1></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                      <div class="mr-auto"></div>
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#about-me">about</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#services">services</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">portfolio</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#blogs">blog</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#connect">connect</a>
+                      </li>
                     </ul>
+                  </div>
                 </div>
-                <div class="row">
-                    <h2>Google Tag Manager</h2>
-                    <ul style="list-style-type:disc">
-                        <li>Setup tag manager with cookie consent</li>
-                        <li> Google Tag Manager Audits</li>
-                        <li>Enhanced Ecommerce Tracking</li>
-                        <li>Cross Domain Tracking</li>
-                        <li>Cross Device Tracking</li>
-                        <li>Data layer Implementation using JavaScript</li>
-                        <li>Server side tracking Setup</li>
-                        <li>Iframe tracking</li>
-                        <li>Google Ads, Floodlight Conversion & Remarketing Setup</li>
-                        <li>Marketing Pixel Implementation</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="projects" id="projects">
-        <h1 class="heading">CERTIFICATIONS</h1>
-        <div class="project-container">
+           </nav>
+         </div>
+     </header>
+
+     <!----------------main area----------->
+
+     <main class="site-main" id="home">
+        <section class="site-banner">
+          <div class="container">
             <div class="row">
-                <img src="./files/GAIQ_page-0001.jpg" alt="GAIQ Exam Completion">
+              <div class="col-lg-6 col-md-12 site-title">
+                <h3 class="title-text">Hey</h3>
+                <h1 class="title-text text-uppercase">I am JAY</h1>
+                <h4 class="title-text text-uppercase"> Website Analytics Expert </h4>
+                <div class="site-button">
+                  <div class="d-flex flex-row flex-wrap">
+                    <button class="btn button primary-button mr-4 text-uppercase"><a href="https://www.upwork.com/freelancers/jayi7" target="_blank" style="color: white; text-decoration: none;">Hire me</a></button>
+                    <button class="btn button secondary-button text-uppercase"><a style="color: black; text-decoration: none;" href="#about-me">About Me</a></button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-12 banner-image">
+                <img src="images/banner/banner-image.png" class="img-fluid">
+              </div>
             </div>
+          </div>
+        </section>
+
+        <!-----------about area------->
+
+        <section class="about-area" id="about-me">
+          <div class="container-fluid">
             <div class="row">
-                <img src="./files/Digital Garage Marketing Course_page-0001.jpg" alt="Digital Garage Marketing Course">
+              <div class="col-lg-6 col-md-12">
+                <div class="about-image">
+                  <img src="images/about-us.png" class="img-fluid">
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-12 about-title">
+                <h2 class="text-uppercase pt-5">
+                  <span>Let me</span>
+                  <span>introduce</span>
+                  <span>myself</span>
+                </h2>
+                <div class="paragraph py-4 w-75">
+                  <p class="para">
+                    I’m a GA4, GTM expert who loves helping businesses track their website traffic and conversions. I’m certified by Google in both platforms, and I have experience working with a variety of businesses, from small startups to large enterprises.
+                  </p>
+                  <p class="para">
+                    I’m also a quick learner and I’m always up for a challenge. If you’re looking for someone to help you get the most out of your Google Analytics and Google Tag Manager accounts, I’m here to help you..
+                  </p>
+                </div>
+                <button class="btn button primary-button text-uppercase"><a href="#connect" style="color: black; text-decoration: none;">Contact Me</a></button>
+              </div>
             </div>
-        </div>
-    </section>
+          </div>
+        </section>
 
-    <!-- <section id="featured-blogs" class="featured-blogs">
-        <h1 class="heading">
-            FEATURED BLOGS
-        </h1>
-        <div class="featured-blogs-container">
-            <div class="bogs-main">
-                <div class="row">
-                    <h3>
-                        Server Side Tracking
-                    </h3>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam saepe dolorem, voluptatibus incidunt
-                        suscipit ipsum enim maiores quo corporis dolores nobis distinctio asperiores blanditiis a laborum
-                        reprehend...
-                    </p>
+        <!-------brand area----------->
+
+        <!-- <secction class="brand-area">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xl-6 col-lg-12 col-md-12">
+                <div class="first-row row">
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-brand">
+                      <img src="images/brands/logo1.png">
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-brand">
+                      <img src="images/brands/logo2.png">
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-brand">
+                      <img src="images/brands/logo3.png">
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-brand">
+                      <img src="images/brands/logo4.png">
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-brand">
+                      <img src="images/brands/logo5.png">
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-brand">
+                      <img src="images/brands/logo6.png">
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-brand">
+                      <img src="images/brands/logo7.png">
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-brand">
+                      <img src="images/brands/logo8.png">
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-brand">
+                      <img src="images/brands/logo9.png">
+                    </div>
+                  </div>
                 </div>
-                <div class="row">
-                    <h3>
-                        Server Side Tracking
-                    </h3>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam saepe dolorem, voluptatibus incidunt
-                        suscipit ipsum enim maiores quo corporis dolores nobis distinctio asperiores blanditiis a laborum
-                        reprehend...
-                    </p>
+              </div>
+              <div class="col-xl-6 col-lg-12 col-md-12">
+                <div class="experience-area">
+                  <div class="d-flex flex-row yours-area">
+                    <h2 class="p-3 years">10</h2>
+                    <h2>
+                      <span>years</span>
+                      <span>Experience</span>
+                      <span>working</span>
+                    </h2>
+                  </div>
+                  <div class="d-flex flex-row flex-wrap call-area">
+                    <span><i class="fa fa-phone fa-3x px-3"></i></span>
+                    <div class="call-now">
+                      <a href="#" class="text-uppercase h4 font-roboto">Call Now</a>
+                      <span class="font-roboto py-2">(+91)907-654-321</span>
+                    </div>
+                  </div>
+                  <div class="bg-panel"></div>
                 </div>
+              </div>
             </div>
-           <a class="read_all_blogs" href="./blogs.html">Read More Blogs.. </a>
-        </div>
-       <a class="read_all_blogs">Read all blogs...</a> 
-    </section> -->
+          </div>
+        </secction> -->
 
-    <section class="contact" id="contact">
-        <h1 class="heading">Get in Touch</h1>
-        <div class="contact-container">
-            <div class="contact-column">
-                <div class="contact-left">
-                    <div class="row">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <div class="info">
-                            <h2>Address</h2>
-                            <h3><a>Surat, Gujrat, India.</a></h3>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <i class="fa-solid fa-id-badge"></i>
-                        <div class="info">
-                            <h2>Upwork</h2>
-                            <h3><a href="https://www.upwork.com/freelancers/jayi7" target="_blank">freelancers/jayi7</a>
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-right">
-                    <div class="row">
-                        <i class="fa-solid fa-envelope"></i>
-                        <div class="info">
-                            <h2>Email</h2>
-                            <h3><a href="mailto:jayisamaliya77@gmail.com" target="_blank">jayisamaliya77@gmail.com</a>
-                            </h3>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <i class="fa-brands fa-linkedin"></i>
-                        <div class="info">
-                            <h2>Linkedin</h2>
-                            <h3><a href="https://in.linkedin.com/in/jay-isamaliya-254744221" target="_blank"
-                                    rel="noopener noreferrer">
-                                    linkedin.com/jay-isamaliya</a></h3>
-                        </div>
-                    </div>
-                </div>
+        <!---------services area------>
+
+        <section class="services-area"  id="services">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 text-center services-title">
+                <h1 class="text-uppercase title-text">Services Offers</h1>
+                <p class="para">
+                  Services I offers as a web analytics expert.
+                </p>
+              </div>
             </div>
+            <div class="container services-list">
+              <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                  <div class="services">
+                    <div class="services-img text-center py-4">
+                      <img src="images/services/s1.png">
+                    </div>
+                    <div class="card-body text-center">
+                      <h5 class="text-title text-uppercase font-roboto">GA- GTM Audit</h5>
+                      <p class="card-text text-secondary">
+                        Discover the power of precision with our GA-GTM Audit service, ensuring your analytics and tracking are in top shape.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                  <div class="services">
+                    <div class="services-img text-center py-4">
+                      <img src="images/services/s2.png">
+                    </div>
+                    <div class="card-body text-center">
+                      <h5 class="text-title text-uppercase font-roboto">Analytics Platforms Setup</h5>
+                      <p class="card-text text-secondary">
+                        Transform your data into actionable insights with our comprehensive Analytics Platforms Setup service.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                  <div class="services">
+                    <div class="services-img text-center py-4">
+                      <img src="images/services/s3.png">
+                    </div>
+                    <div class="card-body text-center">
+                      <h5 class="text-title text-uppercase font-roboto">Conversion Tracking</h5>
+                      <p class="card-text text-secondary">
+                        Conversion Tracking: Unlock the power of data to measure and optimize your online success.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                  <div class="services">
+                    <div class="services-img text-center py-4">
+                      <img src="images/services/s4.png">
+                    </div>
+                    <div class="card-body text-center">
+                      <h5 class="text-title text-uppercase font-roboto">Media Pixels Tracking</h5>
+                      <p class="card-text text-secondary">
+                        With Media Pixel service, revolutionizing how you measure digital media performance.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        </div>
-        <!-- <div class="contact-right">
-                <form method="post" action="http://localhost:5000/login">
-                    <h1>message me</h1>
-                    <input type="text" placeholder="write your name" name="name" required>
-                    <input type="text" placeholder="write your email" name="email" required>
-                    <input type="text" placeholder="subject..." name="topic">
-                    <textarea rows="3" name="message"> write message here...</textarea>
-                    <button type="submit">send message</button>
-                    <p class="toast"></p>
-                </form>
+        <!--------project area-------->
 
-            </div> -->
-        </div>
-    </section>
-    <section class="social-links">
-        <ul>
-            <li><a href="#"><i class="fa-brands fa-instagram" style="font-size: 30px; margin: 10px; font-weight: 800;"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-twitter" style="font-size: 30px; margin: 10px; font-weight: 800;"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-linkedin" style="font-size: 30px; margin: 10px; font-weight: 800;"></i></a></li>
-        </ul>
-        <p>copyright <i class="fa-solid fa-copyright"></i> Reserved | Made by jay isamaliya</p>
-    </section>
-    <section class="footer" id="footer">
-      
-    </section>
-    
-    <script src="./main.js"></script>
-</body>
+        <section class="project-area" id="portfolio">
+          <div class="container">
+            <div class="project-title pb-5">
+              <h1 class="text-uppercase title-h1">Recently Done Projects</h1>
+              <h1 class="tyext-upparcase title-h1">quality work</h1>
+            </div>
+            <div class="button-group">
+              <button class="active" data-filter="" id="btn1">All</button>
+              <button data-filter=".popular">Projects</button>
+              <button data-filter=".latest">Solved Issues</button>
+              <!-- <button data-filter=".following">Following</button>
+              <button data-filter=".upcoming">Upcoming</button> -->
+            </div>
+            <div class="row grid">
+              <div class="col-lg- col-md-6 col-sm-12 element-item popular">
+                <div class="our-project">
+                  <div class="img">
+                     <a href="images/portfolio/resizedImage.png" class="test-popup-link">
+                      <img src="images/portfolio/resizedImage.png"></a>
+                  </div>
+                  <div class="titlt-py-4">
+                    <h4 class="text-uppercase" style="margin-top: 30px;">Google Analytics Setup</h4>
+                    <span class="text-secondary">Setup Google Analytics with implementation of custom events on website and Conversion tracking on Iframe with final Looker Studio dashboard.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg- col-md-6 col-sm-12 element-item popular">
+                <div class="our-project">
+                  <div class="img">
+                    <a href="images/portfolio/resizedImage (1).png" class="test-popup-link">
+                      <img src="images/portfolio/resizedImage (1).png"></a>
+                  </div>
+                  <div class="titlt-py-4">
+                    <h4 class="text-uppercase" style="margin-top: 30px;">Looker Studio Dashboard Creation</h4>
+                    <span class="text-secondary">Sample of dashboard made in Looker Studio of completed Ecommerce project for both Universal Analytics and Google Analytics 4 using Google Tag Manager.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg- col-md-6 col-sm-12 element-item latest">
+                <div class="our-project" style="margin-top: 30px;">
+                  <div class="img">
+                    <a href="images/portfolio/Unassigned Traffic (1).png" class="test-popup-link">
+                      <img src="images/portfolio/Unassigned Traffic (1).png"></a>
+                  </div>
+                  <div class="titlt-py-4">
+                    <h4 class="text-uppercase" style="margin-top: 30px;">Reduced Unassigned Traffic</h4>
+                    <span class="text-secondary">I successfully created strategic changes that led to a significant reduction in unassigned traffic for client.</span>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="col-lg-4 col-md-6 col-sm-12 element-item popular">
+                <div class="our-project">
+                  <div class="img">
+                    <a href="images/portfolio/p3.jpg" class="test-popup-link">
+                      <img src="images/portfolio/p3.jpg"></a>
+                  </div>
+                  <div class="titlt-py-4">
+                    <h4 class="text-uppercase">Female Light</h4>
+                    <span class="text-secondary">Latest Portfolio</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 element-item upcoming">
+                <div class="our-project">
+                  <div class="img">
+                    <a href="images/portfolio/p4.jpg" class="test-popup-link">
+                      <img src="images/portfolio/p4.jpg"></a>
+                  </div>
+                  <div class="titlt-py-4">
+                    <h4 class="text-uppercase">Fourth Air</h4>
+                    <span class="text-secondary">Upcoming</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 element-item upcoming">
+                <div class="our-project">
+                  <div class="img">
+                    <a href="images/portfolio/p5.jpg" class="test-popup-link">
+                      <img src="images/portfolio/p5.jpg"></a>
+                  </div>
+                  <div class="titlt-py-4">
+                    <h4 class="text-uppercase">Fifth Air</h4>
+                    <span class="text-secondary">Upcoming</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
+                <div class="our-project">
+                  <div class="img">
+                    <a href="images/portfolio/p6.jpg" class="test-popup-link">
+                      <img src="images/portfolio/p6.jpg"></a>
+                  </div>
+                  <div class="titlt-py-4">
+                    <h4 class="text-uppercase">Sixth Air</h4>
+                    <span class="text-secondary">Upcoming port</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
+                <div class="our-project">
+                  <div class="img">
+                    <a href="images/portfolio/p7.jpg" class="test-popup-link">
+                      <img src="images/portfolio/p7.jpg"></a>
+                  </div>
+                  <div class="titlt-py-4">
+                    <h4 class="text-uppercase">Seventh Air</h4>
+                    <span class="text-secondary">Upcoming port</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
+                <div class="our-project">
+                  <div class="img">
+                    <a href="images/portfolio/p8.jpg" class="test-popup-link">
+                      <img src="images/portfolio/p8.jpg"></a>
+                  </div>
+                  <div class="titlt-py-4">
+                    <h4 class="text-uppercase">Eighth Air</h4>
+                    <span class="text-secondary">Upcoming port</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 element-item upcoming">
+                <div class="our-project">
+                  <div class="img">
+                    <a href="images/portfolio/p9.jpg" class="test-popup-link">
+                      <img src="images/portfolio/p9.jpg"></a>
+                  </div>
+                  <div class="titlt-py-4">
+                    <h4 class="text-uppercase">Ninth Air</h4>
+                    <span class="text-secondary">Upcoming port</span>
+                  </div> -->
+                <!-- </div>
+              </div> -->
+            </div>
+          </div>
+        </section>
 
-</html>
+        <!-----------about me area---------->
+
+        <section class="about-area" id="blogs">
+          <div class="container">
+            <div class="row text-center">
+              <div class="col-12">
+                <div class="about-title">
+                  <h1 class="text-uppercase title-h1">Blogs written by me</h1>
+                  <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis perferendis aspernatur dolorem labore dicta incidunt nemo, nobis minus natus dolore!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container carousel py-lg-5">
+            <div class="owl-carousel owl-theme">
+              <div class="client row">
+                <div class="col-lg-4.col-md-12 client-img">
+                  <img src="images/portfolio/resizedImage (2).png" class="img-fluid">
+                </div>
+                <div class="col-lg-8 col-md-12 about-client">
+                  <h4 class="text-uppercase">Server Side Tracking</h4>
+                  <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis molestiae nesciunt animi, itaque ea similique?</p>
+                </div>
+              </div>
+              <div class="client row">
+                <div class="col-lg-4.col-md-12 client-img">
+                  <img src="images/portfolio/resizedImage (3).png" class="img-fluid">
+                </div>
+                <div class="col-lg-8 col-md-12 about-client">
+                  <h4 class="text-uppercase">Unassigned Traffic</h4>
+                  <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis molestiae nesciunt animi, itaque ea similique?</p>
+                </div>
+              </div>
+              <div class="client row">
+                <div class="col-lg-4.col-md-12 client-img">
+                  <img src="images/portfolio/resizedImage (2).png" class="img-fluid">
+                </div>
+                <div class="col-lg-8 col-md-12 about-client">
+                  <h4 class="text-uppercase">Server Side Tracking</h4>
+                  <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis molestiae nesciunt animi, itaque ea similique?</p>
+                </div>
+              </div>
+              <div class="client row">
+                <div class="col-lg-4.col-md-12 client-img">
+                  <img src="images/portfolio/resizedImage (3).png" class="img-fluid">
+                </div>
+                <div class="col-lg-8 col-md-12 about-client">
+                  <h4 class="text-uppercase">Unassigned Traffic</h4>
+                  <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis molestiae nesciunt animi, itaque ea similique?</p>
+                </div>
+              </div>
+              <div class="client row">
+                <div class="col-lg-4.col-md-12 client-img">
+                  <img src="images/portfolio/resizedImage (2).png" class="img-fluid">
+                </div>
+                <div class="col-lg-8 col-md-12 about-client">
+                  <h4 class="text-uppercase">Server Side Tracking</h4>
+                  <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis molestiae nesciunt animi, itaque ea similique?</p>
+                </div>
+              </div>
+              <div class="client row">
+                <div class="col-lg-4.col-md-12 client-img">
+                  <img src="images/portfolio/resizedImage (3).png" class="img-fluid">
+                </div>
+                <div class="col-lg-8 col-md-12 about-client">
+                  <h4 class="text-uppercase">Unassigned Traffic</h4>
+                  <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis molestiae nesciunt animi, itaque ea similique?</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+        </section>
+
+        <!---------subscribe me area------->
+
+        <!-- <section class="subscribe-us-area" id="contact">
+          <div class="container subscribe">
+              <div class="row">
+                  <div class="col-lg-12 text-center subscribe-title">
+                      <h4 class="text-uppercase">Get Update From anywhere</h4>
+                      <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
+                          consequuntur.</p>
+                  </div>
+              </div>
+              <div class="d-sm-flex justify-content-center">
+                  <form class="w-50">
+                      <div class="row d-flex flex-row flex-wrap">
+                          <div class="col input-textbox">
+                              <input type="text" id="txtemail" class="form-control" placeholder="Email">
+                          </div>
+                          <div class="col">
+                              <div class="btn-submit">
+                                  <button type="submit" class="btn btn-success float-right">Subscribe</button>
+                              </div>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+        </section> -->
+
+     </main>
+
+     <footer class="footer-area" id="connect">
+       <div class="container">
+         <div class="">
+           <div class="site-logo text-center py-4">
+             <!-- <a href="#"><img src="images/logo.png"></a> -->
+           </div>
+           <div class="social text-center">
+             <h5 class="text-uppercase">Connect With Me</h5>
+             <a href="https://www.upwork.com/freelancers/jayi7" target="_blank"><i class="fa fa-id-badge"></i></a>
+             <a href="https://in.linkedin.com/in/jay-isamaliya-254744221" target="_blank"><i class="fa fa-linkedin"></i></a>
+             <a href="mailto:jayisamaliya77@gmail.com"><i class="fa fa-envelope"></i></a>
+             <a href="https://discordapp.com/users/jay_79278" target="_blank"><i class="fa fa-discord"></i></a>
+           </div>
+           <div class="copyright text-center">
+             <p class="para">
+               Copyright <i class="fa fa-copyright"></i> 2023 All right reserved !  <span style="color: var(--primary-color);"> Jay Isamaliya </span>
+             </p>
+           </div>
+         </div>
+       </div>
+
+     </footer>
+     
+    <!------jquery file---------->
+
+    <script src="js/jquery.3.4.1.js"></script>
+
+    <!---------bootstrap js file-------->
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <!---------isotope file js------->
+
+    <script src="vendor/isotope/isotope.min.js"></script>
+
+    <!--------------------main js------->
+
+    <script src="js/main.js"></script>
+
+     <!------------megnetic popup script file------>
+
+     <script src="vendor/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+
+     <!-----------owl-carousel script file---------->
+
+     <script src="vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+ </body>
+ </html>
