@@ -606,6 +606,18 @@ footer.footer-area .social a > i:hover{
     .site-main > .services-area .services{
         width: 13rem;
     }
+    .single-brand{
+        display: none;
+    }
+    .blog-area .owl-carousel .blog-link{
+        width: 400px;
+        display: flex;
+    }
+    .blog-area button{
+        width: 200px;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 @media only bscreen and (max-width: 792px){
@@ -633,6 +645,10 @@ footer.footer-area .social a > i:hover{
     .site-main .subscribe-us-area .subscribe form .input-textbox input{
         width: 20rem;
         margin: 5%;
+    }
+    .blog-area .blog-link{
+        width: 400px;
+        display: flex;
     }
 }
 
