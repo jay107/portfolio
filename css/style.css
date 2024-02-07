@@ -7,6 +7,7 @@
      box-sizing: border-box;
      height: 100%;
      width: 100%;
+     /* background-color: #F8F8F8; */
      scroll-behavior: smooth;
  }
  /*variables*/
@@ -128,6 +129,13 @@ button:focus, button:active, button:hover, .btn:active, .btn.active{
     padding: 1.7rem;
     color: var(--title-color);
 }
+.navbar-collapse{
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
 
 .header_area .main-menu a{
     transition: all 0.3s ease;
@@ -151,10 +159,11 @@ button:focus, button:active, button:hover, .btn:active, .btn.active{
 
 .site-main .site-banner{
     background: url(../images/banner/home-banner.png) no-repeat 0% 50%;
+    /* background-color: #F8F8F8; */
 }
 
 .site-main .site-banner .site-title h3{
-    padding-top: 35%;
+    padding-top: 25%;
     font-weight: 500;
 }
 
@@ -169,7 +178,7 @@ button:focus, button:active, button:hover, .btn:active, .btn.active{
 }
 
 .site-main .site-banner .site-title h1{
-    font-size: 5rem;
+    font-size: 3rem;
 }
 
 .site-main .site-banner .site-title h4{
@@ -177,14 +186,30 @@ button:focus, button:active, button:hover, .btn:active, .btn.active{
 }
 
 .site-main .site-banner .banner-image > img{
-    padding: 7rem 0;
-    width: 100%;
+    padding: 1rem 0;
+    /* width: 150%; */
+    filter: grayscale(70%);
+    transform: scale(1.2);
+    box-shadow: inset;
 }
 
-/*about section styling*/
-
 .site-main .about-area{
-    padding: 8rem 5rem;
+    padding: 8rem 10rem;
+    margin-top: 6rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    /* width: 100%; */
+}
+
+.about-title{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.about-title .paragraph{
+    width: 75%;
 }
 
 .site-main .about-area .about-title h2 > span{
@@ -196,6 +221,11 @@ button:focus, button:active, button:hover, .btn:active, .btn.active{
 .site-main .about-area .about-title .paragraph > p{
     padding: 0.4rem 0;
 }
+
+.about-area .paragraph button{
+    margin-top: 2rem;
+}
+
 
 /*start brand area*/
 
@@ -209,29 +239,31 @@ button:focus, button:active, button:hover, .btn:active, .btn.active{
     justify-content: center;
 }
 
-.site-main .brand-area .first-row .col-lg-4 > .single-brand{
-    border: 1px solid var(--border-color);
+.site-main .brand-area .single-brand{
+    /* border: 1px solid var(--border-color); */
     text-align: center;
     padding: 1.8rem 0;
-    margin: 0.9rem 0;
-    width: 180px;
-    height: 100px;
-    cursor: pointer;
+    margin-left: 3rem;
+    /* width: 180px; */
+    /* height: 100px; */
+    /* cursor: pointer; */
     transition: transform 0.4s ease;
 }
 
-.site-main .brand-area .first-row .col-lg-4 > .single-brand > img{
-    width: 50%;
+.site-main .brand-area .single-brand{
+    /* width: 50%; */
+    filter: grayscale(0.4);
 }
 
-.site-main .brand-area .first-row .col-lg-4 > .single-brand:hover{
+/* .site-main .brand-area .single-brand:hover{
     box-shadow: var(--box-shadow);
     transform: scale(1.1);
 }
 
-.site-main .brand-area .first-row .col-lg-4 > .single-brand:hover > img{
-    filter: brightness(0.15);
-}
+.site-main .brand-area .single-brand:hover{
+    /* filter: brightness(0.15); 
+    filter: grayscale(1);
+} */
 
 .site-main .brand-area .experience-area{
     padding-left: 1rem;
@@ -277,10 +309,6 @@ button:focus, button:active, button:hover, .btn:active, .btn.active{
 
 /*services area styling*/
 
-.site-main .services-area{
-    padding: 7rem 2rem;
-}
-
 .site-main .services-area .services-title{
     padding: 0 14rem;
 }
@@ -291,10 +319,14 @@ button:focus, button:active, button:hover, .btn:active, .btn.active{
 
 .site-main .services-area .services{
     background: rgba(248, 252, 253, 0.973);
-    padding: 2rem 0;
+    padding: 1rem 0;
     width: 16rem;
-    margin: 5rem 0.5rem;
+    margin: 3rem 0.5rem;
     transition: box-shadow .7s ease;
+}
+
+.services-area h5{
+    margin-bottom: 15px;
 }
 
 .site-main .services-area .services:hover{
@@ -302,9 +334,18 @@ button:focus, button:active, button:hover, .btn:active, .btn.active{
 }
 
 /*project area*/
-
+.project-area h1{
+    text-align: center;
+}
 .site-main .project-area{
     padding: 4rem 0;
+}
+
+.project-area .our-project{
+    background: rgba(248, 252, 253, 0.973);
+    padding: 0.5rem 1rem;
+    height: 10rem;
+    transition: box-shadow .7s ease;
 }
 
 .site-main .project-area .button-group button{
@@ -328,40 +369,46 @@ button:focus, button:active, button:hover, .btn:active, .btn.active{
 
 /*about me */
 
-.site-main .about-area .about-title p{
+.site-main .blog-area{
+    padding: 0rem 10rem;
+    margin-top: 6rem;
+    /* width: 100%; */
+}
+
+.site-main .blog-area .about-title p{
     padding: 1rem 7rem;
 }
 
-.site-main .about-area .client{
+.site-main .blog-area .client{
     background: #ffffff10;
     box-shadow: var(--box-shadow);
     margin: 3rem 0;
 }
 
-.site-main .about-area .client .client-img{
+.site-main .blog-area .client .client-img{
     padding-left: 0.5rem;
     padding-top: 0.5rem;
 }
 
-.site-main .about-area .client .about-client{
+.site-main .blog-area .client .about-client{
     padding-top: 2rem;
 }
 
-.site-main .about-area .client .about-client h4{
+.site-main .blog-area .client .about-client h4{
     font: normal 500 21px/20px var(--roboto);
 }
 
-.site-main .about-area .client .about-client p{
+.site-main .blog-area .client .about-client p{
     font-size: 14px;
 }
 
-.site-main .about-area .owl-carousel .owl-item{
+.site-main .blog-area .owl-carousel .owl-item{
     display: flex;
     justify-content: center;
     padding: 0 1.5rem;
 }
 
-.site-main .about-area .owl-carousel .owl-dots .owl-dot.active span{
+.site-main .blog-area .owl-carousel .owl-dots .owl-dot.active span{
     background: var(--primary-color);
     width: 12px;
     height: 12px;
@@ -409,6 +456,118 @@ color: whitesmoke;
     transform: scale(1.1);
     background: transparent;
     color: whitesmoke !important;
+}
+
+/* contact us */
+
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact .contact-content .left p{
+    text-align: justify;
+}
+
+.contact .contact-content .left .icons{
+    margin: 1px 0;
+}
+
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: crimson;
+}
+
+.contact .contact-content .info .head{
+    font-weight: 500;
+}
+
+.contact .contact-content .info .sub-title{
+    color: #333;
+}
+
+.contact .right form .fields{
+    display: flex;
+}
+
+.contact .right form .field, .contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+
+.contact .right form .name{
+    margin-right: 10px;
+}
+
+.contact .right form .email{
+    margin-left: 10px;
+}
+
+.contact .right form .field input, .contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+
+.contact .right form .button{
+    height: 47px;
+    width: 170px;
+}
+
+.contact .right form .button button{
+    width: 100%;
+    height: 100%;
+    border: 2px solid crimson;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact .right form .button button:hover{
+    color: crimson;
+    background: none;
 }
 
 /*footer styling */
