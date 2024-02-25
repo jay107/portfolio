@@ -194,8 +194,8 @@ button:focus, button:active, button:hover, .btn:active, .btn.active{
 }
 
 .site-main .about-area{
-    padding: 8rem 10rem;
-    margin-top: 6rem;
+    padding: 0rem 10rem;
+    margin-top: 0rem;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -243,27 +243,13 @@ button:focus, button:active, button:hover, .btn:active, .btn.active{
     /* border: 1px solid var(--border-color); */
     text-align: center;
     padding: 1.8rem 0;
-    margin-left: 3rem;
+    margin-left: 4rem;
     /* width: 180px; */
     /* height: 100px; */
     /* cursor: pointer; */
     transition: transform 0.4s ease;
-}
-
-.site-main .brand-area .single-brand{
-    /* width: 50%; */
     filter: grayscale(0.4);
 }
-
-/* .site-main .brand-area .single-brand:hover{
-    box-shadow: var(--box-shadow);
-    transform: scale(1.1);
-}
-
-.site-main .brand-area .single-brand:hover{
-    /* filter: brightness(0.15); 
-    filter: grayscale(1);
-} */
 
 .site-main .brand-area .experience-area{
     padding-left: 1rem;
@@ -337,14 +323,19 @@ button:focus, button:active, button:hover, .btn:active, .btn.active{
 .project-area h1{
     text-align: center;
 }
+
 .site-main .project-area{
     padding: 4rem 0;
+}
+
+.project-area .container .element-item-popular .our-project a{
+    margin-top: 200px;
 }
 
 .project-area .our-project{
     background: rgba(248, 252, 253, 0.973);
     padding: 0.5rem 1rem;
-    height: 10rem;
+    /* height: 10rem; */
     transition: box-shadow .7s ease;
 }
 
@@ -460,101 +451,48 @@ color: whitesmoke;
 
 /* contact us */
 
-.contact .contact-content{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.contact .contact-content .column{
-    width: calc(50% - 30px);
-}
-
-.contact .contact-content .text{
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.contact .contact-content .left p{
-    text-align: justify;
-}
-
-.contact .contact-content .left .icons{
-    margin: 1px 0;
-}
-
-.contact .contact-content .row{
-    display: flex;
-    height: 65px;
-    align-items: center;
-}
-
-.contact .contact-content .row .info{
-    margin-left: 30px;
-}
-
-.contact .contact-content .row i{
-    font-size: 25px;
-    color: crimson;
-}
-
-.contact .contact-content .info .head{
-    font-weight: 500;
-}
-
-.contact .contact-content .info .sub-title{
-    color: #333;
-}
-
-.contact .right form .fields{
-    display: flex;
-}
-
-.contact .right form .field, .contact .right form .fields .field{
-    height: 45px;
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-.contact .right form .textarea{
+.contact form .textarea{
     height: 80px;
     width: 100%;
 }
 
-.contact .right form .name{
-    margin-right: 10px;
+.contact form input{
+    height: 2rem;
+}
+.contact form .field textarea{
+ height: 5rem;
 }
 
-.contact .right form .email{
-    margin-left: 10px;
+.contact form input::placeholder{
+    color: #4458dc;
 }
 
-.contact .right form .field input, .contact .right form .textarea textarea{
-    height: 100%;
-    width: 100%;
+.contact form .field input, .contact form .textarea textarea{
+    /* height: 100%; */
+    line-height: 2rem;
+    text-transform: capitalize;
+    width: 20rem;
     border: 1px solid lightgray;
+    margin: 1rem 0;
     border-radius: 6px;
     outline: none;
     padding: 0 15px;
     font-size: 17px;
-    font-family: 'Poppins', 'sans-serif';
 }
 
-.contact .right form .textarea textarea{
+.contact form .textarea textarea{
     padding-top: 10px;
     resize: none;
 }
 
-.contact .right form .button{
+.contact form .button{
     height: 47px;
     width: 170px;
 }
 
-.contact .right form .button button{
-    width: 100%;
-    height: 100%;
+.contact form .button button{
+    width: 200px;
+    height: auto;
     border: 2px solid crimson;
     background: crimson;
     color: #fff;
@@ -565,7 +503,7 @@ color: whitesmoke;
     transition: all 0.3s ease;
 }
 
-.contact .right form .button button:hover{
+.contact form .button button:hover{
     color: crimson;
     background: none;
 }
@@ -573,11 +511,14 @@ color: whitesmoke;
 /*footer styling */
 
 footer.footer-area{
-    padding: 5rem 0;
+    padding: 5rem 0 5rem 0;
     background: url(../images/footer-bg.png) no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-footer.footer-area .social h5{
+footer.footer-area h5{
     font: normal 500 23px/30px var(--roboto);
 }
 
