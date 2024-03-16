@@ -195,7 +195,7 @@ button:focus, button:active, button:hover, .btn:active, .btn.active{
 
 .site-main .about-area{
     padding: 0rem 10rem;
-    margin-top: 0rem;
+    margin-top: 1rem;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -299,6 +299,11 @@ button:focus, button:active, button:hover, .btn:active, .btn.active{
     padding: 0 14rem;
 }
 
+.services-list .row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
 .site-main .services-area .services-title h1{
     font-size: 35px;
 }
@@ -332,10 +337,10 @@ button:focus, button:active, button:hover, .btn:active, .btn.active{
     margin-top: 200px;
 }
 
-.project-area .our-project{
+.our-project{
     background: rgba(248, 252, 253, 0.973);
     padding: 0.5rem 1rem;
-    /* height: 10rem; */
+    height: 10rem;
     transition: box-shadow .7s ease;
 }
 
