@@ -135,6 +135,17 @@
                   </div>
                 </div>
               </a>  
+              <a href="https://medium.com/@jayisamaliya12/consent-mode-v2-advanced-consent-mode-setup-using-gtm-bba4bd5752cd" target="_blank" style="text-decoration: none; color: rgb(46, 45, 45);" class="blog-link">
+                <div class="client row">
+                  <div class="col-lg-4.col-md-12 client-img">
+                    <img src="images/portfolio/consent mode v2.webp" style="margin-top: 15%;" class="img-fluid" style="filter: grayscale(1); filter: brightness(100%);">
+                  </div>
+                  <div class="col-lg-8 col-md-12 about-client">
+                    <h4 class="text-uppercase">Consent Mode V2 Setup using GTM</h4>
+                    <p class="para">What is consent mode v2? How to setup basic & advanced consent mode using GTM & cookiebot?</p>
+                  </div>
+                </div>
+              </a>  
             </div>
           </div>
         </section>
@@ -145,37 +156,45 @@
 
     <footer class="footer-area" id="connect">
       <div class="container">
-        <div class="">
           <div class="social text-center">
             <h5 class="text-uppercase">Connect With Me</h5>
             <a href="https://www.linkedin.com/in/jay-isamaliya" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a>
              <a href="mailto:contact@jayisamaliya.in" title="Gmail"><i class="fa fa-envelope"></i></a>
              <a href="https://linktr.ee/jayisamaliya" target="_blank" title="Linktree"><i class="fa fa-user-tie"></i></a>
           </div>
-          <!-- <div class="column right">
-           <div class="text">Message Me</div>
-           <form action="contact_form.php" method="POST">
-               <div class="fields">
-                   <div class="field name">
-                       <input type="text" placeholder="name" name="name" required>
-                   </div>
-                   <div class="field email">
-                       <input type="email" placeholder="email" name="email" required>
-                   </div>
-               </div>
-               <div class="field textarea">
-                   <textarea cols="30" rows="10" name="message" placeholder="Describe project..." required>
-                   </textarea>
-               </div>
-               <div class="button">
-                   <button type="submit">Send message</button>
-               </div>
-           </form>
-       </div> -->
-        </div>
       </div>
-
+      <div class="form-container contact">
+        <h5 class="text-uppercase">Message Me</h5> 
+       <form action="https://script.google.com/macros/s/AKfycbxDhrdK6F5XO-qP9Vaxr6QbHKfjypcUebJY9oHOdbn2ajmZhQFUQ7ORSyLdnlFx8tE/exec" method="POST" class="gform">
+           <div class="fields">
+               <div class="field name">
+                   <input type="text" placeholder="name" name="name" required>
+               </div>
+               <div class="field email">
+                   <input type="email" placeholder="email" name="email" required>
+               </div>
+               <!-- <div class="field color">
+                 <input type="color" placeholder="color" name="color" required>
+             </div> -->
+           </div>
+           <div class="field textarea">
+               <textarea cols="30" rows="10" name="message" required> Write your message here..
+               </textarea>
+           </div>
+           <div class="button">
+               <!-- <button type="submit">Send message</button> -->
+               <button class="btn button primary-button mr-4 text-uppercase" type="submit">Send Message</button>
+           </div>
+           <div style="display:none" class="thankyou_message text-uppercase">
+             <h5><em>Thanks</em> for the message! I will get back to you soon!
+             </h5>
+            </div>
+       </form>
+   </div>
     </footer>
+
+    <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
+
     
    <!------jquery file---------->
 

@@ -485,6 +485,7 @@ color: whitesmoke;
     /* height: 100%; */
     line-height: 2rem;
     text-transform: capitalize;
+    color: #4458dc;
     width: 20rem;
     border: 1px solid lightgray;
     margin: 1rem 0;
@@ -496,7 +497,7 @@ color: whitesmoke;
 }
 
 .contact form .textarea textarea{
-    padding-top: 10px;
+    padding: 0 0 !important;
     resize: none;
 }
 
@@ -567,6 +568,17 @@ footer.footer-area .social a > i:hover{
         width: 200px;
         align-items: center;
         text-align: center;
+    }
+    .site-main .blog-area{
+        padding: 0rem;
+        margin-top: 6rem;
+        /* width: 100%; */
+    }
+    .banner-image{
+        margin-top: 2rem;
+    }
+    .site-main .brand-area .experience-area{
+        padding-left: 0rem;
     }
 }
 
