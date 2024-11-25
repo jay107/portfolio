@@ -368,7 +368,7 @@ h6 {
 
 #hero h2 {
   color: #484848;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-size: 24px;
 }
 
@@ -377,17 +377,23 @@ h6 {
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
+  background: #3498db;
   display: inline-block;
   padding: 10px 30px;
   border-radius: 50px;
   transition: 0.5s;
-  color: #3498db;
+  color: #ffffff;
   border: 2px solid #3498db;
 }
 
+.upper-link-para{
+  margin-top: 20px;
+  font-style: oblique;
+}
+
 #hero .btn-get-started:hover {
-  background: #3498db;
-  color: #fff;
+  background: #ffffff;
+  color: #3498db;
 }
 
 #hero .animated {
@@ -407,10 +413,10 @@ h6 {
 
 @media (max-width: 991px) {
   #hero {
-    /* height: 90vh; */
+    height: auto;
   }
   #hero .hero-img{
-    margin-top: 20px;
+    margin: 0px;
   }
 
   #hero .animated {
@@ -428,7 +434,7 @@ h6 {
 
 @media (max-width: 768px) {
   #hero {
-    margin-top: 20px;
+    margin-top: 0px;
   }
 
   #hero h1 {
@@ -467,7 +473,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 50px 0;
   overflow: hidden;
 }
 
@@ -514,11 +520,16 @@ section {
 --------------------------------------------------------------*/
 .clients {
   background: #ffff;
-  padding: 10px 0;
+  padding: 0px 0;
   text-align: center;
 }
 
-.clients .col-lg-2 {
+.clients .container .row{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.clients .container-box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -529,7 +540,7 @@ section {
   filter: grayscale(100);
   transition: all 0.4s ease-in-out;
   display: inline-block;
-  padding: 10px 0;
+  /* padding: 10px 0; */
 }
 
 .clients img:hover {
@@ -539,13 +550,21 @@ section {
 
 @media (max-width: 768px) {
   .clients img {
-    width: 40%;
+    width: 50%;
+  }
+  .clients .container .row{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (max-width: 575px) {
   .clients img {
-    width: 30%;
+    width: 40%;
+  }
+  .clients .container .row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
