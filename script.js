@@ -19,7 +19,7 @@
     row.setAttribute('role', 'region');
     row.setAttribute('aria-label', row.previousElementSibling.textContent + '; scroll horizontally');
     const originals = [...row.children];
-    const state = {row, originals, cycle: 0, hover: false, focus: false, touch: false, visible: false, resumeAt: 0};
+    const state = {row, originals, cycle: 0, position: 0, hover: false, focus: false, touch: false, visible: false, resumeAt: 0};
     const rebuild = () => {
       row.querySelectorAll('[data-carousel-copy]').forEach(copy => copy.remove());
       const addCopies = () => originals.forEach(item => {
@@ -36,6 +36,7 @@
         copy.dataset.carouselCopy = 'true'; copy.setAttribute('aria-hidden', 'true'); row.append(copy);
       });
       state.cycle = row.children[segment.length].offsetLeft - row.children[0].offsetLeft;
+      state.position = 0;
       row.scrollLeft = 0;
     };
     rebuild();
@@ -76,8 +77,10 @@
     if (!document.hidden && !motionPreference.matches) carousels.forEach(state => {
       if (!state.visible || state.hover || state.focus || state.touch || now < state.resumeAt || !state.cycle) return;
       moving = true;
-      state.row.scrollLeft += elapsed * state.speed;
-      if (state.row.scrollLeft >= state.cycle) state.row.scrollLeft -= state.cycle;
+      // Keep fractional progress independently: Safari can round scrollLeft writes.
+      if (Math.abs(state.row.scrollLeft - state.position) > 2) state.position = state.row.scrollLeft;
+      state.position = (state.position + elapsed * state.speed) % state.cycle;
+      state.row.scrollLeft = state.position;
     });
     if (moving) toolsFrame = requestAnimationFrame(advanceTools);
     else scheduleTools();

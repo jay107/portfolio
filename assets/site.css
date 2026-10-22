@@ -180,3 +180,7 @@ p{color:inherit}a{transition:color .25s,background-color .25s,border-color .25s}
 /* Keep browser autofill consistent with the contact section. */
 .contact input:-webkit-autofill,.contact input:-webkit-autofill:hover,.contact input:-webkit-autofill:focus,.contact textarea:-webkit-autofill,.contact textarea:-webkit-autofill:hover,.contact textarea:-webkit-autofill:focus{-webkit-box-shadow:0 0 0 1000px var(--ink) inset!important;box-shadow:0 0 0 1000px var(--ink) inset!important;-webkit-text-fill-color:var(--paper)!important;caret-color:var(--paper);animation:none;transition:none}
 .contact input:autofill,.contact textarea:autofill{box-shadow:0 0 0 1000px var(--ink) inset!important;color:var(--paper);caret-color:var(--paper)}
+
+/* Give logo blending an explicit backdrop in Safari's scrolling layers. */
+.platform-tile{background:var(--paper);isolation:isolate}
+.platform-tile img{mix-blend-mode:multiply}
