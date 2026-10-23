@@ -184,3 +184,51 @@ p{color:inherit}a{transition:color .25s,background-color .25s,border-color .25s}
 /* Give logo blending an explicit backdrop in Safari's scrolling layers. */
 .platform-tile{background:var(--paper);isolation:isolate}
 .platform-tile img{mix-blend-mode:multiply}
+
+/* Responsive layout refinements and accessible menu states. */
+
+
+
+.platforms{border-top:0}
+
+.menu-icon{position:relative;display:block;width:20px;height:18px}
+.menu-icon:before,.menu-icon:after{content:"";position:absolute;left:0;top:5px;width:20px;height:2px;background:currentColor;transition:transform .25s ease,top .25s ease}
+.menu-icon:after{top:12px}
+.menu-toggle[aria-expanded=true] .menu-icon:before{top:8px;transform:rotate(45deg)}
+.menu-toggle[aria-expanded=true] .menu-icon:after{top:8px;transform:rotate(-45deg)}
+.menu-toggle[aria-expanded=true] .menu-label{display:none}
+@media(max-width:1024px){
+ .menu-toggle{display:flex;align-items:center;justify-content:center;gap:10px;min-width:48px;min-height:44px}
+ .site-header nav{display:flex;position:absolute;top:100%;left:0;right:0;padding:20px 24px;flex-direction:column;background:var(--paper);visibility:hidden;opacity:0;transform:translateY(-8px);pointer-events:none;transition:opacity .2s ease,transform .2s ease,visibility .2s;border-bottom:1px solid var(--line)}
+ .site-header nav.open{visibility:visible;opacity:1;transform:translateY(0);pointer-events:auto}
+}
+@media(max-width:760px){
+ .hero{min-height:0;padding-block:44px 28px;display:block}
+ 
+ .hero-constellation.selected-clusters{left:38%;right:0;top:0;bottom:auto;height:260px;mask-image:linear-gradient(to right,transparent,#000 18%)}
+ .hero-bottom{position:static;margin-top:28px;justify-content:center}
+ .about{padding-top:24px}
+ 
+ 
+ .platform-grid{gap:8px;padding-inline:0}
+ .platform-tile{flex:0 0 calc((100% - 16px)/3);min-width:0;min-height:74px;padding:9px 4px;gap:5px}
+ .platform-tile img{width:22px;height:22px}.platform-tile img.word-logo{width:54px;max-width:100%}
+ .platform-tile figcaption{font-size:9px;line-height:1.3;overflow-wrap:anywhere}
+ .article-slider{gap:16px}.article-slider>article{flex-basis:72%;max-width:290px}
+ 
+ .sphere-hero{min-height:390px;padding-block:38px;display:block}
+ .sphere-hero .library-hero-copy{max-width:100%}
+ 
+ 
+ .library-sphere{inset:auto 0 20px auto;width:55%;height:auto;aspect-ratio:600/520;mask-image:none;opacity:1}
+ .library-sphere svg{display:block;overflow:visible}
+ 
+}
+
+/* Keep section titles and supporting copy aligned with their content. */
+h1,h2,h3,.eyebrow,.hero-copy,.library-hero-copy,.section-heading,.platform-heading,.section-intro,.platform-subheading,.form-kicker{text-align:left}
+.platform-heading>p{margin-left:0;margin-right:0}
+@media(max-width:760px){.platform-heading,.section-heading{align-items:flex-start}}
+
+/* Indent touch-navigation links consistently on phones and tablets. */
+@media(max-width:1024px){.site-header nav a{display:block;width:100%;padding:10px 20px;text-align:left}.site-header nav{align-items:stretch}}

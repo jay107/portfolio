@@ -4,14 +4,16 @@
   const menu = document.querySelector('.menu-toggle');
   const navigation = document.querySelector('#navigation');
   menu.hidden = false;
-  function closeMenu() { menu.setAttribute('aria-expanded', 'false'); navigation.classList.remove('open'); }
+  menu.setAttribute('aria-label', 'Open menu');
+  function closeMenu() { menu.setAttribute('aria-label', 'Open menu'); menu.setAttribute('aria-expanded', 'false'); navigation.classList.remove('open'); }
   menu.addEventListener('click', () => {
     const open = menu.getAttribute('aria-expanded') !== 'true';
+    menu.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     menu.setAttribute('aria-expanded', String(open)); navigation.classList.toggle('open', open);
   });
   navigation.addEventListener('click', e => { if (e.target.closest('a')) closeMenu(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') { closeMenu(); menu.focus(); } });
-  window.matchMedia('(min-width:761px)').addEventListener('change', closeMenu);
+  window.matchMedia('(min-width:1025px)').addEventListener('change', closeMenu);
 
   const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
   const carousels = [...document.querySelectorAll('.platform-grid')].map((row, index) => {
@@ -108,11 +110,44 @@
   window.addEventListener('scroll', () => { if (!scrollQueued) { scrollQueued = true; requestAnimationFrame(updateBackTop); } }, {passive:true});
   window.addEventListener('resize', updateBackTop); updateBackTop();
 
-  // Local-only hooks. No analytics request is made here. A consent-aware analytics
-  // integration can subscribe to these events later; never include form contents.
-  function record(name, detail = {}) { document.dispatchEvent(new CustomEvent('portfolio:interaction', {detail:{name,...detail}})); }
-  document.querySelectorAll('.article-link').forEach(link => link.addEventListener('click', () => record('article_click', {articleId:link.href.split('/').pop()})));
-  document.querySelectorAll('a[href^="mailto:"]').forEach(link => link.addEventListener('click', () => record('email_click')));
+  // Only event metadata is queued. Never include visitor-entered values.
+  function record(event, detail = {}) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({event, page_path: location.pathname, ...detail});
+    document.dispatchEvent(new CustomEvent('portfolio:interaction', {detail:{name:event,...detail}}));
+  }
+  function trackLink(event) {
+    if (event.type === 'auxclick' && event.button !== 1) return;
+    const link = event.target.closest('a[href]');
+    if (!link) return;
+    const section = link.closest('section,header,footer');
+    record('link_clicks', {
+      click_text: (link.getAttribute('aria-label') || link.textContent).trim().replace(/\s+/g, ' '),
+      click_url: link.href,
+      link_section: section ? (section.id || section.getAttribute('aria-label') || (section.matches('header') ? 'Header' : section.matches('footer') ? 'Footer' : 'Banner')) : 'Page'
+    });
+  }
+  document.addEventListener('click', trackLink);
+  document.addEventListener('auxclick', trackLink);
+  // Visible time on this page load. Background time is excluded.
+  let engagement = {seconds:0, fired:[]};
+  let timeMark = performance.now();
+  let wasVisible = !document.hidden;
+  function updateTime() {
+    const now = performance.now();
+    if (wasVisible) engagement.seconds += (now - timeMark) / 1000;
+    timeMark = now; wasVisible = !document.hidden;
+    [60,120,300].forEach(seconds => {
+      if (engagement.seconds >= seconds && !engagement.fired.includes(seconds)) {
+        engagement.fired.push(seconds);
+        record('time_on_site', {time_seconds:seconds, time_minutes:seconds / 60});
+      }
+    });
+  }
+  setInterval(updateTime, 1000);
+  document.addEventListener('visibilitychange', updateTime);
+  window.addEventListener('pagehide', updateTime);
+  window.addEventListener('pageshow', () => { timeMark = performance.now(); wasVisible = !document.hidden; });
   const search = document.querySelector('#article-search');
   if (search) {
     const cards = [...document.querySelectorAll('[data-topic]')];
@@ -143,15 +178,40 @@
   const submitLabel = submit.innerHTML;
   let started = false, pending = false;
   const endpoint = (window.PORTFOLIO_CONFIG || {}).contactEndpoint || '';
-  form.addEventListener('input', () => {
-    if (!started) { started = true; record('contact_start'); }
+  const formEvent = (event, detail = {}) => record(event, {form_id:form.id, ...detail});
+  const seenFields = new Set();
+  const isField = field => field.matches('input:not([name="website"]),textarea');
+  form.addEventListener('focusin', event => {
+    if (isField(event.target) && !started) { started = true; formEvent('form_start', {field_name:event.target.name}); }
   });
+  form.addEventListener('input', event => {
+    const field = event.target;
+    if (!isField(field)) return;
+    if (!started) { started = true; formEvent('form_start', {field_name:field.name}); }
+    if (field.value.trim() && !seenFields.has(field.name)) {
+      seenFields.add(field.name); formEvent('form_field', {field_name:field.name});
+    }
+  });
+  const formObserver = new IntersectionObserver(entries => {
+    if (entries.some(entry => entry.intersectionRatio >= .5)) {
+      formEvent('form_view'); formObserver.disconnect();
+    }
+  }, {threshold:.5});
+  formObserver.observe(form);
+  let validationQueued = false;
+  form.addEventListener('invalid', () => {
+    if (validationQueued) return;
+    validationQueued = true;
+    status.textContent = 'Please check the highlighted fields and try again.';
+    formEvent('form_failed', {error_type:'validation'});
+    setTimeout(() => validationQueued = false, 0);
+  }, true);
   form.addEventListener('submit', async event => {
     event.preventDefault();
     if (pending || !form.reportValidity()) return;
-    if (!endpoint) { status.textContent = 'Email delivery is not connected yet. Please email contact@jayisamaliya.in directly.'; return; }
+    if (!endpoint) { status.textContent = 'Email delivery is not connected yet. Please email contact@jayisamaliya.in directly.'; formEvent('form_failed', {error_type:'configuration'}); return; }
     if (!/^https:\/\/formspree\.io\/f\/[a-zA-Z0-9]+$/.test(endpoint)) {
-      status.textContent = 'The form is temporarily unavailable. Please email contact@jayisamaliya.in.'; return;
+      status.textContent = 'The form is temporarily unavailable. Please email contact@jayisamaliya.in.'; formEvent('form_failed', {error_type:'configuration'}); return;
     }
     pending = true;
     const data = new URLSearchParams(new FormData(form));
@@ -168,10 +228,10 @@
       const result = await response.json();
       if (result.errors || result.ok === false) throw new Error('not_accepted');
       status.textContent = 'Thanks—your message has been accepted. I’ll reply by email.';
-      record('contact_success'); form.reset(); started = false;
+      formEvent('form_submit'); form.reset(); started = false; seenFields.clear();
     } catch {
       status.textContent = 'We couldn’t confirm your message was sent. Your text is saved here—please retry or email contact@jayisamaliya.in.';
-      record('contact_error');
+      formEvent('form_failed', {error_type:'submission'});
     } finally {
       clearTimeout(timeout); pending = false; fields.forEach(field => field.readOnly = false);
       submit.disabled = false; submit.innerHTML = submitLabel;
