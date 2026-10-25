@@ -235,3 +235,6 @@ h1,h2,h3,.eyebrow,.hero-copy,.library-hero-copy,.section-heading,.platform-headi
 
 /* Compact home banner subheading. */
 .hero .hero-role{font-size:clamp(12px,1.35vw,20px)}
+
+/* Let contact fields size from their content and padding. */
+.contact input,.contact textarea{height:auto;min-height:0}
