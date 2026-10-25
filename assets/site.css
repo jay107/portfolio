@@ -232,3 +232,6 @@ h1,h2,h3,.eyebrow,.hero-copy,.library-hero-copy,.section-heading,.platform-headi
 
 /* Indent touch-navigation links consistently on phones and tablets. */
 @media(max-width:1024px){.site-header nav a{display:block;width:100%;padding:10px 20px;text-align:left}.site-header nav{align-items:stretch}}
+
+/* Compact home banner subheading. */
+.hero .hero-role{font-size:clamp(12px,1.35vw,20px)}
