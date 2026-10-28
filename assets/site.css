@@ -238,3 +238,8 @@ h1,h2,h3,.eyebrow,.hero-copy,.library-hero-copy,.section-heading,.platform-headi
 
 /* Let contact fields size from their content and padding. */
 .contact input,.contact textarea{height:auto;min-height:0}
+
+/* Longer descriptive article heading stays clear of the sphere. */
+.sphere-hero h1.guides-title{font-size:clamp(40px,5.5vw,82px);overflow-wrap:normal}
+@media(max-width:760px){.sphere-hero h1.guides-title{font-size:clamp(32px,7.5vw,56px)}}
+.error-page{min-height:100svh;display:flex;flex-direction:column}.error-content{flex:1;padding-block:clamp(64px,12vh,140px);max-width:1000px}.error-content h1{font-size:clamp(44px,7vw,88px);letter-spacing:-.055em;margin-bottom:24px}.error-content p:not(.eyebrow){max-width:540px;margin-bottom:28px}.error-content .actions{gap:16px}.error-mark{font-size:72px;line-height:1;color:var(--accent);margin-bottom:24px}
